@@ -5,7 +5,7 @@ License: GPLv3, MIT
 Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add
 Requires at least: 3.1
 Tested up to: 4.3.1
-Stable tag: 1.1.0
+Stable tag: 1.0.4
 
 == Description ==
 
@@ -34,16 +34,6 @@ If you like the plugin please [Donate here](http://goo.gl/harWg0)
 4. Go to the Facebook Comments Sync settings, go through the steps and hit update!
 
 == Changelog ==
-
-= 1.1.0 =
-* Shortcodes functionality added
-* Comment box is moved to default comments location
-
-= 1.0.4 =
-* Information removed for Facebook side bug.
-
-= 1.0.3 =
-* Information added for Facebook side bug.
 
 = 1.0.2 =
 * Minor bug fix.

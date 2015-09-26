@@ -15,10 +15,10 @@ function fbcommentssync_init(){
 		'app_ID' => '',
 		'moderators' => '',
 		'num' => '5',
-		'title' => '',
+		'title' => 'Comments',
 		'titleclass' => '',
 		'width' => '100%',
-		'btdogan' => 'off',
+		'btdogan' => 'on',
 		'scheme' => 'light',
 		'language' => 'en_US'
 	);
@@ -256,41 +256,9 @@ function fbcommentssync_options() {
 			</p>
 		</form>
 
-					<h3 class="title">Shortcodes</h3>
-					<table class="form-table">
-						<tr valign="top">
-							<th scope="row">Injection</th>
-							<td><p>For posts/pages (default settings):</p>
-								<p><code>[fbcommentssync]</code></p>
-								<p>For PHP (default settings):</p>
-								<p><code>&lt;?php echo do_shortcode('[fbcommentssync]'); ?&gt;</code></p>
-							</td>
-						</tr>
-						<tr valign="top">
-							<th scope="row">Variables</th>
-							<td><p>To manually adding comment box into any place in your website or override the default settings, you can use shortcodes.</p>
-								<ul>
-									<li><strong>url:</strong> url of the comments (leave blank for current URL)</li>
-									<li><strong>width:</strong>  width of the comment box (px/%)</li>
-									<li><strong>title:</strong> title of the comments box (you can leave blank)</li>
-									<li><strong>num:</strong> number of comments (number)</li>
-									<li><strong>scheme:</strong> colour scheme (light/dark)</li>
-								</ul>
-							</td>
-						</tr>
-						<tr valign="top">
-							<th scope="row">
-								Examples
-							</th>
-							<td><p>For posts/pages (override):</p>
-								<p><code>[fbcommentssync url="http://btdogan.com" width="100%" num="5"]</code></p>
-								<p>For PHP (override):</p>
-								<p><code>&lt;?php echo do_shortcode('[fbcommentssync url="http://btdogan.com" width="100%" num="5"]'); ?&gt;</code></p>
-						</tr>
-					</table>
-
-			</div></div>
+</div></div>
             <div class="options_right">
+
                  <div class="donation">
 					<a href="<?php echo FBCS_DONATE_LINK; ?>" target="_blank"><img class="paypal" src="<?php echo plugins_url( 'images/paypal.gif' , __FILE__ ); ?>" width="150" height="50"></a>
 					<p>If you like this plugin, please help me building more open source projects with your donation. Every cent counts, I appreciate your kindness.</p>

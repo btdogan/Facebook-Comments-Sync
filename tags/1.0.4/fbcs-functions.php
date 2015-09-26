@@ -67,7 +67,7 @@ function fbcsf_impComments($var) {
 	};
 }
 
-function fbcsf_runfbcs() {
+function fbcsf_runsync() {
 	global $wpdb;
 	$posts = $wpdb->prefix . 'posts';
 	$postsID = $wpdb->get_results(" SELECT ID FROM  $posts  WHERE post_type =  'post' ");

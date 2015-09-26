@@ -53,7 +53,7 @@ function fbcommentbox($content) {
 				$commenttitle .= $options['title'] . "</h3>";
 			}
 
-			$content .= "<div id='fbcs_box' class='comments-area'>" .$commenttitle;
+			$content .= $commenttitle;
 
 			$content .= "<div class=\"fb-comments\" data-href=\"" . get_permalink() . "\" data-num-posts=\"" . $options['num'] . "\" data-width=\"" . $options['width'] . "\" data-colorscheme=\"" . $options['scheme'] . "\" data-notify='true'></div>";
 
@@ -64,8 +64,6 @@ function fbcommentbox($content) {
 					}
 				}
 			}
-
-			$content .= "</div>";
 		}
 	}
 	return $content;
@@ -95,11 +93,6 @@ function fbcsinit_top() {
 				FB.Event.subscribe('comment.remove', comment_remove);
 			});
 
-			jQuery(document).ready(function(){
-				jQuery("#comments").replaceWith(jQuery("#fbcs_box"));
-
-			});
-
 		</script>
 
 		<?php
@@ -113,7 +106,7 @@ function fbcommentsajax() { ?>
 
 		var comment_add = function (response) {
 			var cevap = response;
-
+			console.log('comment.create fired');
 			jQuery.ajax({
 				type: 'POST',
 				url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
@@ -132,7 +125,7 @@ function fbcommentsajax() { ?>
 
 		var comment_remove = function (response) {
 			var cevap = response;
-
+			console.log('comment.remove fired');
 			jQuery.ajax({
 				type: 'POST',
 				url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
@@ -156,31 +149,3 @@ function fbcommentsajax() { ?>
 }
 
 add_action('wp_footer', 'fbcommentsajax', 100);
-
-
-function fbcsshortcode($fbcsa) {
-	extract(shortcode_atts(array(
-		"fbcommentssync" => get_option('fbcommentssync'),
-		"url" => get_permalink(),
-	), $fbcsa));
-	if (!empty($fbcsa)) {
-		foreach ($fbcsa as $key => $option)
-			$fbcommentssync[$key] = $option;
-	}
-
-	if ($fbcommentssync['title'] != '') {
-		if ($fbcommentssync['titleclass'] == '') {
-			$commenttitle = "<h3>";
-		} else {
-			$commenttitle = "<h3 class=\"".$fbcommentssync['titleclass']."\">";
-		}
-		$commenttitle .= $fbcommentssync['title']."</h3>";
-	}
-
-	$fbcommentbox = $commenttitle;
-	$fbcommentbox .=	"<div class=\"fb-comments\" data-href=\"".$url."\" data-num-posts=\"".$fbcommentssync['num']."\" data-width=\"".$fbcommentssync['width']."\" data-colorscheme=\"".$fbcommentssync['scheme']."\"></div>";
-	return $fbcommentbox;
-}
-
-add_shortcode('fbcommentssync', 'fbcsshortcode');
-add_filter('widget_text', 'do_shortcode');
