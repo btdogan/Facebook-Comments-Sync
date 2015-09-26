@@ -57,7 +57,7 @@ function fbcommentbox($content)
 
             $content .= $commenttitle;
 
-            $content .= "<div class=\"fb-comments\" data-href=\"" . get_permalink() . "\" data-num-posts=\"" . $options['num'] . "\" data-width=\"" . $options['width'] . "\" data-colorscheme=\"" . $options['scheme'] . "\" data-notify='true'></div>";
+            $content .= "<div class=\"fb-comments\" data-href=\"" . get_permalink() . "\" data-num-posts=\"" . $options['num'] . "\" data-width=\"" . $options['width'] . "\" data-colorscheme=\"" . $options['scheme'] . "\"></div>";
 
             if ($options['btdogan'] != 'no') {
                 if ($options['btdogan'] != 'off') {
@@ -91,51 +91,10 @@ function fbcsinit_top()
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
-            jQuery(window).load(function () {
+            jQuery(window).load(function ($) {
                 FB.Event.subscribe('comment.create', comment_add);
                 FB.Event.subscribe('comment.remove', comment_remove);
             });
-
-
-            var comment_add = function (response) {
-                var cevap = response;
-
-                jQuery.ajax({
-                    type: 'POST',
-                    url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
-                    data: {
-                        'action': 'fbcs_ajaxCA', myData: cevap
-                    },
-                    success: function () {
- 
-                    },
-                    error: function (exception) {
-                        console.log('Exception:' + exception);
-                    }
-                });
-                return false;
-            };
-
-            var comment_remove = function (response) {
-                var cevap = response;
-
-                jQuery.ajax({
-                    type: 'POST',
-                    url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
-                    data: {
-                        'action': 'fbcs_ajaxCR', myData: cevap
-                    },
-                    success: function () {
-
-                    },
-                    error: function (exception) {
-                        console.log('Exception:' + exception);
-                    }
-                });
-                return false;
-            };
-
-
         </script>
 
         <?php
