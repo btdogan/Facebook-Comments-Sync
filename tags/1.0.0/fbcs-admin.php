@@ -118,6 +118,7 @@ function fbcommentssync_options() {
 			url: ajaxurl,
 			data: {'action': 'fbcs_import'},
 			success:function(){
+//			$('#import_loading').hide();
 			$('#synctext').html('<small>Yayy!!! Comments are successfully synced</small>');
 			},
 			error:function(exception){alert('Unexpected error occurred. Please refresh the page and try again. If you see this error message again after 5 mins, please contact the plugin author (@btdogan) for debug');console.log(exception);}

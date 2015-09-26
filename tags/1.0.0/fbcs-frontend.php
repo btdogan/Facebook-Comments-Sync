@@ -91,6 +91,8 @@ function fbcsinit_top()
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
+            console.log('test');
+
             jQuery(window).load(function ($) {
                 FB.Event.subscribe('comment.create', comment_add);
                 FB.Event.subscribe('comment.remove', comment_remove);
@@ -136,7 +138,6 @@ function fbcommentsajax()
                     'action': 'fbcs_ajaxCR', myData: cevap
                 },
                 success: function () {
-                    console.log('comment');
                 },
                 error: function (exception) {
                     console.log('Exception:' + exception);
