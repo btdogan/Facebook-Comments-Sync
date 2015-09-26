@@ -258,12 +258,6 @@ function fbcommentssync_options() {
 
 </div></div>
             <div class="options_right">
-				<div class="donation">
-					<h3>!IMPORTANT!</h3>
-					<p>Due to a bug in Facebook SDK, realtime comment add/remove function is not working properly. Bug is reported to Facebook and confirmed by them.
-						You can still use this plugin, when the problem resolved you please sync comments with your database</p>
-				</div>
-
                  <div class="donation">
 					<a href="<?php echo FBCS_DONATE_LINK; ?>" target="_blank"><img class="paypal" src="<?php echo plugins_url( 'images/paypal.gif' , __FILE__ ); ?>" width="150" height="50"></a>
 					<p>If you like this plugin, please help me building more open source projects with your donation. Every cent counts, I appreciate your kindness.</p>

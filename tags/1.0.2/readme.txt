@@ -5,7 +5,7 @@ License: GPLv3, MIT
 Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add
 Requires at least: 3.1
 Tested up to: 4.3.1
-Stable tag: 1.0.3
+Stable tag: 1.0.2
 
 == Description ==
 
@@ -17,12 +17,8 @@ Features:
 * Comments moderation tool.
 * Customizable box width, color schema, language, comments count options.
 * Sync all previous comments to your database.
-* Realtime add/remove comments to your database*.
+* Realtime add/remove comments to your database.
 * You can control displaying comment box in specific posts/pages.
-
-= IMPORTANT =
-Due to a bug in Facebook SDK, realtime comment add/remove function is not working properly. Bug is reported to Facebook and confirmed by them.
-You can still use this plugin, when the problem resolved you please sync comments with your database
 
 = Want More? =
 
