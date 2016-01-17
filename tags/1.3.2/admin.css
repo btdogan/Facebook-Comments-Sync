@@ -1,0 +1,64 @@
+.options_header h1 {
+    padding: 0 10px 0 6px;
+}
+.options {
+    width:100%
+}
+.options_left {
+    float: left;
+    width: 100%;
+    padding: 0 10px 0 6px;
+    margin-right: -275px;
+}
+.options_left .inside {
+    margin-right: 275px;
+}
+.options_left .error{
+    margin: 0 -5px 0;
+    padding: 1px 0;
+}
+.options_right {
+    padding:0 20px 0 10px;
+    float: right;
+    width: 225px;
+}
+.donation {
+    line-height: 19px;
+    padding: 5px;
+    font-size: 12px;
+    border: solid 1px #ddae56;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    color: #555;
+    text-align: center;
+}
+.box {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: solid 1px #808080;
+    background: #eee;
+    padding:10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img.paypal {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.atitle {
+    margin-top: 0;
+}
+
+.box h3{
+    margin-top: 0;
+}
+
+.box h2{
+    margin-bottom: 0;
+}
+
