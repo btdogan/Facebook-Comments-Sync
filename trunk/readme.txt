@@ -2,10 +2,10 @@
 Contributors: btdogan
 Donate link:  http://goo.gl/harWg0
 License: GPLv3, MIT
-Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add
+Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add, seo facebook comments
 Requires at least: 3.1
-Tested up to: 4.3.1
-Stable tag: 1.1.0
+Tested up to: 4.4.1
+Stable tag: 1.4.0
 
 == Description ==
 
@@ -17,7 +17,7 @@ Features:
 * Comments moderation tool.
 * Customizable box width, color schema, language, comments count options.
 * Sync all previous comments to your database.
-* Realtime add/remove comments to your database*.
+* Realtime add/remove comments to your database.
 * You can control displaying comment box in specific posts/pages.
 
 = Want More? =
@@ -34,6 +34,46 @@ If you like the plugin please [Donate here](http://goo.gl/harWg0)
 4. Go to the Facebook Comments Sync settings, go through the steps and hit update!
 
 == Changelog ==
+
+= 1.4.0 =
+* Comment box id is changed to #comments
+* Defaults comments template is overridden.
+* Posts interval for sync function is decreased to 3 from 5.
+
+= 1.3.4 =
+* Bug fix.
+
+= 1.3.3 =
+* Important Bug fix.
+
+= 1.3.2 =
+* Bug fix.
+
+= 1.3.1 =
+* Bug fix.
+
+= 1.3.0 =
+* Admin panel sync function is restructured to resolve errors caused by short server response time.
+
+= 1.2.3 =
+* Bug fixes.
+
+= 1.2.3 =
+* file_get_contents() function is replaced by curl method.
+* die() function is replaced by wp_die() function.
+* Id option is added for title.
+
+= 1.2.2 =
+* Code modification
+
+= 1.2.1 =
+* Auto comment approve function is added
+
+= 1.2.0 =
+* Comments order functionality added.
+
+= 1.1.1 =
+* Bug fix about the native comments display.
 
 = 1.1.0 =
 * Shortcodes functionality added
