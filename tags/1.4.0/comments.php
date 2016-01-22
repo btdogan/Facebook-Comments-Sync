@@ -1,6 +1,11 @@
 <?php
 
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
+
     $options = get_option('fbcommentssync');
+
 
     if (!isset($options['btdogan'])) {
         $options['btdogan'] = "off";
@@ -49,7 +54,7 @@
             }
 
             ?>
-            <div id='comments' class='comments-area'> <?php echo $commenttitle; ?>
+            <div id='comments' class='comments-area'> <?php $commenttitle; ?>
 
             <div class="fb-comments" data-href="<?php echo get_permalink(); ?>" data-num-posts="<?php echo $options['num']; ?>" data-width="<?php echo $options['width']; ?>" data-colorscheme="<?php echo $options['scheme']; ?>" data-notify='true'></div>
 <?php
@@ -57,7 +62,7 @@
                 if ($options['btdogan'] != 'off') {
                     if (empty($fbcommentssync['btdogan'])) {
                         ?>
-                <p><a href="http://www.btdogan.com">Facebook Comments Sync</a></p> <?php
+                <p><a href="http://btdogan.com">Facebook Comments Sync</a></p> <?php
                     }
                 }
             }

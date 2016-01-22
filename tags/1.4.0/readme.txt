@@ -5,7 +5,7 @@ License: GPLv3, MIT
 Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add, seo facebook comments
 Requires at least: 3.1
 Tested up to: 4.4.1
-Stable tag: 1.4.1
+Stable tag: 1.4.0
 
 == Description ==
 
@@ -34,9 +34,6 @@ If you like the plugin please [Donate here](http://goo.gl/harWg0)
 4. Go to the Facebook Comments Sync settings, go through the steps and hit update!
 
 == Changelog ==
-
-= 1.4.1 =
-* Bug fix
 
 = 1.4.0 =
 * Comment box id is changed to #comments

@@ -3,7 +3,7 @@
 Plugin Name:    Facebook Comments Sync
 Plugin URI:     http://btdogan.com/facebook-comments-sync/
 Description:    Add the Facebook Comments box to your website and sync it with your Wordpress database; show comment counts and use latest comments widget.
-Version:        1.4.1
+Version:        1.4.0
 Author:         btdogan
 Author URI:     http://btdogan.com
 

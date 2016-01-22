@@ -556,7 +556,7 @@ function fbcommentssync_options()
                                     <li><strong>width:</strong> width of the comment box (px/%)</li>
                                     <li><strong>title:</strong> title of the comments box (you can leave blank)</li>
                                     <li><strong>num:</strong> number of comments (number)</li>
-                                    <li><strong>scheme:</strong> color scheme (light/dark)</li>
+                                    <li><strong>scheme:</strong> colour scheme (light/dark)</li>
                                     <li><strong>order:</strong> comments order (social/time/reverse_time)</li>
                                 </ul>
                             </td>
@@ -593,23 +593,11 @@ function fbcommentssync_options()
 
                     <h2>Burak T. DOGAN</h2>
 
-                    <p class="atitle">Engineer(MBA, M.Sc.)/Developer</p>
+                    <p class="atitle">Engineer(M.Sc.)/Developer</p>
 
-                    <p>Looking for job!<br/>Available for Hire!<br/><br/><a href="http://www.btdogan.com">btdogan.com</a>
+                    <p>Looking for job!<br/>Available for Hire!<br/><br/><a href="http://btdogan.com">btdogan.com</a>
                     </p>
                     <a href="https://twitter.com/btdogan" class="twitter-follow-button">Follow @btdogan</a>
-                </div>
-
-                <div class="box">
-                    <h3>Check out my mobile app for Android phones:</h3>
-
-                    <h2>TimeSet</h2>
-
-                    <p>TimeSet is a social network application that provides users a location-based photo-sharing platform in which photos pinned to the location are stacked chronologically; and it allows users to create personal bucket lists of events and travel destinations for future adventures.
-                        <br/><br/><a href="https://play.google.com/store/apps/details?id=timeset.com.timeset" target="_blank"><img class="paypal"
-                                                                                                                                   src="<?php echo plugins_url('images/playstore.png', __FILE__); ?>"></a>
-                    </p>
-
                 </div>
 
                 <script>!function (d, s, id) {
