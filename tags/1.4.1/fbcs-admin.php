@@ -13,9 +13,6 @@ function fbcommentssync_init()
         'posts' => 'on',
         'pages' => 'off',
         'homepage' => 'off',
-        'replace' => 'off',
-        'onlyfb' => 'on',
-        'both' => 'off',
         'app_ID' => '',
         'moderators' => '',
         'num' => '5',
@@ -37,6 +34,7 @@ function fbcommentssync_init()
         }
 
     }
+
 
     add_option('fbcommentssync', $new_options);
 }
@@ -153,7 +151,8 @@ function fbcommentssync_options()
                                 </th>
                                 <td id="synctext">
                                     <small>To sync previously entered Facebook Comments with your database, use this
-                                        button.
+                                        button.<br/>By default, comments are added(removed) to your database when they
+                                        are entered(deleted).
                                     </small>
                                 </td>
                             </tr>
@@ -179,6 +178,8 @@ function fbcommentssync_options()
                                         }
                                     });
 
+
+
                                     function cevir(count) {
                                         $.ajax({
                                             type: 'POST',
@@ -198,45 +199,10 @@ function fbcommentssync_options()
                                             }
                                         });
                                     }
-
                                     cevir(0);
                                     return false;
 
                                 });
-
-
-                                if($("#replace").is(":checked")){
-                                    $("#show").hide();
-                                }
-
-                                $("#replace").change(function () {
-                                    if ($(this).is(":checked")) {
-                                        $("#show").hide();
-                                    } else {
-                                        $("#show").show();
-                                    }
-
-                                });
-
-
-                                $("#onlyfb").change(function () {
-                                    if ($(this).is(":checked")) {
-                                        $("#both").attr("checked", false);
-                                    } else if ($("#both").is(":checked")) {
-                                        $(this).attr("checked", false);
-                                    }
-
-                                });
-
-                                $("#both").change(function () {
-                                    if ($(this).is(":checked")) {
-                                        $("#onlyfb").attr("checked", false);
-                                    } else if ($("#onlyfb").is(":checked")) {
-                                        $(this).attr("checked", false);
-                                    }
-
-                                });
-
 
                             });
                         </script>
@@ -255,7 +221,7 @@ function fbcommentssync_options()
                                 <th scope="row"><label for="btdogan">Promote</label></th>
                                 <td><input id="credit" name="fbcommentssync[btdogan]" type="checkbox"
                                            value="on" <?php checked('on', $options['btdogan']); ?> />
-                                    <small>This adds "Powered by Facebook Comments Sync" text under the comment box.
+                                    <small>This changes Facebook's default credit text with "Facebook Comments Sync".
                                     </small>
                                 </td>
                             </tr>
@@ -264,30 +230,9 @@ function fbcommentssync_options()
                         <h3 class="title">Display Settings</h3>
                         <table class="form-table">
                             <tr valign="top">
-                                <th scope="row"><label for="posts">Replace</label></th>
-                                <td><input id="replace" name="fbcommentssync[replace]" type="checkbox"
-                                            <?php checked('on', $options['replace']); ?> />
-                                    <small>This option replaces default comment system with the Facebook Comments.
-                                    </small>
-                                </td>
-                            </tr>
-
-
-                            <tr valign="top" id="show">
-                                <th scope="row"><label for="posts">Show</label></th>
-                                <td><input id="onlyfb" name="fbcommentssync[onlyfb]" type="checkbox"
-                                           value="on" <?php checked('on', $options['onlyfb']); ?> />
-                                    <small>Show only Facebook Comments Box.</small>
-                                    <input id="both" name="fbcommentssync[both]" type="checkbox"
-                                           <?php checked('on', $options['both']); ?> />
-                                    <small>Show both.</small>
-                                </td>
-                            </tr>
-
-                            <tr valign="top">
                                 <th scope="row"><label for="posts">Posts</label></th>
                                 <td><input id="posts" name="fbcommentssync[posts]" type="checkbox"
-                                           <?php checked('on', $options['posts']); ?> />
+                                           value="on" <?php checked('on', $options['posts']); ?> />
                                     <small>Note: To disable comment box for a specific post, please use the meta box at
                                         the bottom of the page that you edit your post.
                                     </small>
@@ -296,7 +241,7 @@ function fbcommentssync_options()
                             <tr valign="top">
                                 <th scope="row"><label for="pages">Pages</label></th>
                                 <td><input id="pages" name="fbcommentssync[pages]" type="checkbox"
-                                           <?php checked('on', $options['pages']); ?> />
+                                           value="on" <?php checked('on', $options['pages']); ?> />
                                     <small>Note: To disable comment box for a specific page, please use the meta box at
                                         the bottom of the page that you edit your page.
                                     </small>
@@ -650,8 +595,7 @@ function fbcommentssync_options()
 
                     <p class="atitle">Engineer(MBA, M.Sc.)/Developer</p>
 
-                    <p>Looking for job!<br/>Available for Hire!<br/><br/><a
-                            href="http://www.btdogan.com">btdogan.com</a>
+                    <p>Looking for job!<br/>Available for Hire!<br/><br/><a href="http://www.btdogan.com">btdogan.com</a>
                     </p>
                     <a href="https://twitter.com/btdogan" class="twitter-follow-button">Follow @btdogan</a>
                 </div>
@@ -661,12 +605,9 @@ function fbcommentssync_options()
 
                     <h2>TimeSet</h2>
 
-                    <p>TimeSet is a social network application that provides users a location-based photo-sharing
-                        platform in which photos pinned to the location are stacked chronologically; and it allows users
-                        to create personal bucket lists of events and travel destinations for future adventures.
-                        <br/><br/><a href="https://play.google.com/store/apps/details?id=timeset.com.timeset"
-                                     target="_blank"><img class="paypal"
-                                                          src="<?php echo plugins_url('images/playstore.png', __FILE__); ?>"></a>
+                    <p>TimeSet is a social network application that provides users a location-based photo-sharing platform in which photos pinned to the location are stacked chronologically; and it allows users to create personal bucket lists of events and travel destinations for future adventures.
+                        <br/><br/><a href="https://play.google.com/store/apps/details?id=timeset.com.timeset" target="_blank"><img class="paypal"
+                                                                                                                                   src="<?php echo plugins_url('images/playstore.png', __FILE__); ?>"></a>
                     </p>
 
                 </div>

@@ -4,8 +4,8 @@ Donate link:  http://goo.gl/harWg0
 License: GPLv3, MIT
 Tags: facebook, comments, sync, import, database, facebook comments, facebook comments box, comments import, facebook comments import, facebook comments add, seo facebook comments
 Requires at least: 3.1
-Tested up to: 4.4.2
-Stable tag: 1.5.0
+Tested up to: 4.4.1
+Stable tag: 1.4.1
 
 == Description ==
 
@@ -13,7 +13,6 @@ This plugin adds the Facebook Comments box to your website and sync it with your
 
 Features:
 
-* NEW: Option to show only Facebook Comments box, both default comment box and Facebook Comments box or replace default comment system.
 * Show/hide Facebook Comments box in posts/pages/homepage.
 * Comments moderation tool.
 * Customizable box width, color schema, language, comments count options.
@@ -35,9 +34,6 @@ If you like the plugin please [Donate here](http://goo.gl/harWg0)
 4. Go to the Facebook Comments Sync settings, go through the steps and hit update!
 
 == Changelog ==
-
-= 1.5.0 =
-* Option to show only Facebook Comments box, both default comment box and Facebook Comments box or replace default comment system is added.
 
 = 1.4.1 =
 * Bug fix

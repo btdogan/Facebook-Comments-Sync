@@ -4,6 +4,7 @@
 
     if (!isset($options['btdogan'])) {
         $options['btdogan'] = "off";
+
     }
     if (!isset($options['posts'])) {
         $options['posts'] = "off";

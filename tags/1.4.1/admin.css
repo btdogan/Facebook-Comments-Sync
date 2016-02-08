@@ -7,6 +7,7 @@
 .options_left {
     float: left;
     width: 100%;
+    padding: 0 10px 0 6px;
     margin-right: -275px;
 }
 .options_left .inside {

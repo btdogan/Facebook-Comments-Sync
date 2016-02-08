@@ -11,3 +11,13 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
+*.name
+.idea/codeStyleSettings.xml
+.idea/encodings.xml
+*.iml
+.idea/jsLibraryMappings.xml
+*.xml
+.svn/entries
+*.svn-base
+.svn/wc.db
+.svn/wc.db-journal
