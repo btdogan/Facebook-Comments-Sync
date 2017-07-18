@@ -16,7 +16,7 @@ add_action('wp_head', 'fbgraphinfo');
 
 function boxplacer() {
     $options = get_option('fbcommentssync');
-    if ($options['replace'] == 'on') {
+    if ( isset( $options['replace'] ) && 'on' == $options['replace'] ) {
 
         add_filter('comments_template', 'fbcommentboxm', 100);
 
@@ -65,15 +65,18 @@ function fbcommentbox($content) {
 
         if ($post_meta['_disable_fbcs'] != 'on') {
 
+			$commenttitle = '';
+
             if ($options['title'] != '') {
-                if ($options['titleclass'] == '' && $options['titleid'] == '') {
-                    $commenttitle = "<h3>";
-                } else {
-                    if ($options['titleid'] == '') {
+				$commenttitle = "<h3>";
+                if ( '' != $options['titleclass'] || '' != $options['titleid'] ) {
+                    if ( $options['titleclass'] && '' == $options['titleid'] ) {
                         $commenttitle = "<h3 class=\"" . $options['titleclass'] . "\">";
-                    } else if ($options['titleclass'] == '') {
+                    }
+					elseif ( '' == $options['titleclass'] && $options['titleid'] ) {
                         $commenttitle = "<h3 id=\"" . $options['titleid'] . "\">";
-                    } else {
+                    }
+					else {
                         $commenttitle = "<h3 class=\"" . $options['titleclass'] . "\" id=\"" . $options['titleid'] . "\">";
                     }
                 }
